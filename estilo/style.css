@@ -1,0 +1,117 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+/*Aquis são as fontes importadas, lembrando de fazer o root e depois configurar onde devem ser colocadas*/
+
+:root {
+    --fonte1: Verdana, Geneva, sans-serif;
+    --fonte2: 'Passion One', cursive;
+    --fonte3: 'Sriracha', cursive;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-size: 1em;
+}
+
+html,
+body {
+    min-height: 100vh;
+    background-color: darkgray;
+    font-family: var(--fonte1);
+}
+
+header {
+    background-color: black;
+    color: white;
+    text-align: center;
+
+}
+
+header h1 {
+    padding-top: 50px;
+    font-variant: small-caps;
+    /*aqui as primeiras letras ficam maiores, no entanto, todas estão maiúsculas */
+    font-family: var(--fonte2);
+    font-size: 10vw;
+    /*Aumenta e diminui de acordo com a largura da tela, não é o ideal, mas por enquanto vamos trabalhar asism.*/
+
+}
+
+header>p {
+    padding-bottom: 50px;
+}
+
+header a,
+footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+
+}
+
+header a:hover,
+footer a:hover {
+    text-decoration: underline;
+}
+
+section {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    line-height: 2em;
+    /*espaçamento duplo entre as frases*/
+    padding-left: 30px;
+    font-family: var(--fonte3);
+    font-size: 3, 5vw;
+}
+
+section>p {
+    padding-bottom: 2em;
+}
+
+section.normal {
+    background-color: white;
+    color: black;
+}
+
+section.imagem {
+    background-color: rgb(51, 51, 51);
+    color: white;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.445);
+    background-size: cover;
+    background-attachment: fixed; /*Essa aqui é a configuração para deixar fixa e o efeito paralax funcionando*/
+
+}
+
+section.imagem>p {
+    display: inline-block;
+    /*aqui o bloco se adapita ao tamanho do conteúdo*/
+    padding: 5px;
+    /*para não ficar muito colado no bloco*/
+    background-color: rgba(0, 0, 0, 0.404);
+    text-shadow: 1.5px 1.5px 1px black;
+}
+
+section#img01 {
+    background-image: url(../imagens/background001.jpg);
+    /*aqui utiliza-se o '..' para identificar que vai subir uma pasta, e depois ir para imagens*/
+    background-position: right center;
+
+}
+
+section#img02 {
+    background-image: url(../imagens/background002.jpg);
+}
+
+
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 5px;
+}
